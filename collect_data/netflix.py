@@ -1,4 +1,5 @@
 import proxy_request
+from bs4 import BeautifulSoup
 
 
 class Page:
@@ -22,7 +23,8 @@ class Page:
             return self.base_url + self.country + '-' + self.lang + '/' + self.page_type + self.page_id
 
     def query(self, r: proxy_request.ProxyRequest):
-        self.html = r.query_request_text_from_url(self.url)
+        text = r.query_request_text_from_url(self.url)
+        self.html = BeautifulSoup(text, 'html.parser')
         a_tags = self.html.find_all('a')
         self.queried_urls = [a.get('href') for a in a_tags]
         self.genres = self.find_pages('/browse/genre/')
