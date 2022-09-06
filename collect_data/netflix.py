@@ -140,9 +140,3 @@ def query_titles(titles: list) -> list:
         queried_data.append(new_page.data)
         print(f'netflix done: {new_page.data["name"]}')
     return queried_data
-
-# titles = query_genres('us')
-# print(len(titles), 'us')
-# 4520
-titles = query_genres('gb')
-print(len(titles), 'gb')

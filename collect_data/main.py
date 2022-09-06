@@ -1,8 +1,5 @@
-from collect_functions import query_titles_by_market
-from collect_functions import read_all_titles_by_market
-from collect_functions import find_missing_titles_from_netflix_data
-from collect_functions import query_missing_netflix_data
-from collect_functions import query_missing_data
+from collect_functions import query_titles_by_market, read_all_titles_by_market, query_missing_data
+from collect_functions import find_missing_titles_from_netflix_data, query_missing_netflix_data
 import tomatoes
 import imdb
 import youtube
