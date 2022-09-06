@@ -17,7 +17,7 @@ pdf = load_data(folder)
 df = pdf.copy(deep=True)
 
 # choose markets
-markets = read_available_markets()
+markets = read_available_markets(folder)
 market = st.selectbox('choose a market', markets)
 df = filter_data_by_market(folder, market, df)
 

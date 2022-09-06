@@ -45,8 +45,8 @@ def cast_col(df: pd.DataFrame, int_cols: list, col_type) -> pd.DataFrame:
     return df
 
 
-def read_available_markets() -> list:
-    dir_list = os.listdir('../data/markets')
+def read_available_markets(folder: str) -> list:
+    dir_list = os.listdir(folder + 'markets')
     return [d.replace('.json', '').replace('titles_', '') for d in dir_list]
 
 
