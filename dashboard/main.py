@@ -6,7 +6,7 @@ import streamlit as st
 
 # https://docs.streamlit.io/library/cheatsheet
 
-folder = '../data/'
+folder = './data/'
 
 st.set_page_config(page_icon='👾', page_title='movie selector')
 st.title('movie finder')
