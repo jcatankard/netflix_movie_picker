@@ -100,7 +100,7 @@ def filter_on_list(df: pd.DataFrame, col: str, text: str) -> pd.DataFrame:
 
 
 def filter_on_year(df: pd.DataFrame) -> pd.DataFrame:
-    year_options = np.array([y for y in df['year'] if y not in [0, None]])
+    year_options = np.array([y for y in df['year'] if (y not in [0, None]) | (y <= date.today().year)])
     min_year = date(year_options.min(), 1, 1)
     max_year = date(year_options.max() + 1, 1, 1) - timedelta(days=1)
     if min_year != max_year:
