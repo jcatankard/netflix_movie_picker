@@ -4,6 +4,7 @@ I always wanted a more efficient way to choose which film to watch rather than e
 I often use Rotten Tomatoes as a quick (albeit not entirely reliable) indicator to determine if a film is worth watching.
 
 So here is the "Netflix Movie Picker" app.
+ - Link https://jcatankard-netflix-movie-picker-dashboardmain-l3v1cs.streamlitapp.com/
 
 ## front end
 The front end is a Streamlit dashboard that allows you to easily select a movie or tv series based on your chosen filters.
